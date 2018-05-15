@@ -20,7 +20,7 @@ static int counts[THREAD_COUNT];
 
 static void *doit(void *a)
 {
-    int rc, i, thread_id = (int)a;
+    int rc, i, thread_id = *((int *)a);
     pid_t pid = getpid();
     FCGX_Request request;
     char *server_name;
@@ -67,15 +67,17 @@ static void *doit(void *a)
 
 int main(void)
 {
-    int i;
+    int i, pid[THREAD_COUNT] = { 0 };
     pthread_t id[THREAD_COUNT];
 
     FCGX_Init();
 
-    for (i = 1; i < THREAD_COUNT; i++)
-        pthread_create(&id[i], NULL, doit, (void*)i);
+    for (i = 1; i < THREAD_COUNT; i++) {
+	pid[i] = i;
+        pthread_create(&id[i], NULL, doit, &pid[i]);
+    }
 
-    doit(0);
+    doit(&pid[0]);
 
     return 0;
 }
