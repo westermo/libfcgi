@@ -13,7 +13,6 @@ pkgconfig_DATA = fcgi.pc \
                  fcgi++.pc
 
 EXTRA_DIST = LICENSE.TERMS              \
-             Makefile.nt                \
              cgi-fcgi/cgi-fcgi.mak      \
              examples/authorizer.mak    \
              examples/echo.mak          \
@@ -29,41 +28,8 @@ EXTRA_DIST = LICENSE.TERMS              \
              images/serv-hd.gif         \
              images/words-hd.gif        \
              include/fcgi_config_x86.h  \
-             java/FCGIGlobalDefs.java   \
-             java/FCGIInputStream.java  \
-             java/FCGIInterface.java    \
-             java/FCGIMessage.java      \
-             java/FCGIOutputStream.java \
-             java/FCGIRequest.java      \
              libfcgi/os_unix.c          \
              libfcgi/os_win32.c         \
-             perl/ChangeLog             \
-             perl/FCGI.PL               \
-             perl/FCGI.XL               \
-             perl/MANIFEST              \
-             perl/Makefile.PL           \
-             perl/README                \
-             perl/aclocal.m4            \
-             perl/configure             \
-             perl/configure.in          \
-             perl/echo.PL               \
-             perl/fcgi_config.h.in      \
-             perl/oldinterface.pod      \
-             perl/remote.PL             \
-             perl/threaded.PL           \
-             perl/typemap               \
-             perl/version.pm            \
-             Win32/FastCGI.dsw          \
-             Win32/authorizer.dsp       \
-             Win32/cgifcgi.dsp          \
-             Win32/config_h.dsp         \
-             Win32/echo-cpp.dsp         \
-             Win32/echo.dsp             \
-             Win32/echox.dsp            \
-             Win32/libfcgi.dsp          \
-             Win32/logdump.dsp          \
-             Win32/size.dsp             \
-             Win32/threaded.dsp         \
              doc/FCGI_Accept.3          \
              doc/FCGI_Finish.3          \
              doc/FCGI_SetExitStatus.3   \
