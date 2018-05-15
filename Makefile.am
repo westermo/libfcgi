@@ -20,7 +20,7 @@ EXTRA_DIST = LICENSE                    \
              examples/echox.mak         \
              examples/size.mak          \
              examples/echo-cpp.mak      \
-             libfcgi/libfcgi.mak        \
+             src/libfcgi.mak            \
              images/aplib-hd.gif        \
              images/divider.gif         \
              images/fcgi-hd.gif         \
@@ -30,7 +30,7 @@ EXTRA_DIST = LICENSE                    \
              images/words-hd.gif        \
              include/fcgi_config_x86.h  \
              src/os_unix.c              \
-             srci/os_win32.c            \
+             src/os_win32.c             \
              doc/FCGI_Accept.3          \
              doc/FCGI_Finish.3          \
              doc/FCGI_SetExitStatus.3   \
