@@ -458,7 +458,7 @@ static void ScheduleIo(void)
        ((length = fromWS.stop - fromWS.next) != 0)) {
 	if(OS_AsyncWrite(appServerSock, 0, fromWS.next, length,
 			 AppServerWriteHandler,
-			 (ClientData)appServerSock) == -1) {
+			 (ClientData)&appServerSock) == -1) {
 	    FCGIexit(OS_Errno);
 	} else {
 	    fcgiWritePending = TRUE;
@@ -474,7 +474,7 @@ static void ScheduleIo(void)
 
 	if(OS_AsyncRead(appServerSock, 0, fromAS.next, BUFFLEN,
 			AppServerReadHandler,
-			(ClientData)appServerSock) == -1) {
+			(ClientData)&appServerSock) == -1) {
 	    FCGIexit(OS_Errno);
 	} else {
 	    fcgiReadPending = TRUE;
