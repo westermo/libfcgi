@@ -17,7 +17,7 @@ AC_DEFUN([FCGI_COMMON_CHECKS], [
 	    [Define if the fpos_t typedef is in stdio.h])],
 	AC_MSG_RESULT([no]))
 
-    AC_CHECK_HEADERS([sys/socket.h netdb.h netinet/in.h arpa/inet.h])
+    AC_CHECK_HEADERS([netdb.h netinet/in.h arpa/inet.h])
     AC_CHECK_HEADERS([sys/time.h limits.h sys/param.h unistd.h])
 
     AC_MSG_CHECKING([for a fileno() prototype in stdio.h])
@@ -27,14 +27,13 @@ AC_DEFUN([FCGI_COMMON_CHECKS], [
 		   [Define if there's a fileno() prototype in stdio.h])],
 	    AC_MSG_RESULT([no]))
 
-    if test "$HAVE_SYS_SOCKET_H"; then
+    AC_CHECK_HEADERS([sys/socket.h],
 	AC_MSG_CHECKING([for socklen_t in sys/socket.h])
 	AC_EGREP_HEADER([socklen_t], [sys/socket.h],
 	    [AC_MSG_RESULT([yes])
 	     AC_DEFINE([HAVE_SOCKLEN], [1],
 			       [Define if the socklen_t typedef is in sys/socket.h])],
-	   AC_MSG_RESULT([no]))
-    fi
+	   AC_MSG_RESULT([no])))
 
     #--------------------------------------------------------------------
     #  Do we need cross-process locking on this platform?
