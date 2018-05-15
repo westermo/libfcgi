@@ -8,7 +8,7 @@ INCLUDE_FILES   = $(INCLUDEDIR)/fastcgi.h  \
 		  $(INCLUDEDIR)/fcgiapp.h  \
 		  $(INCLUDEDIR)/fcgimisc.h
 
-LIBDIR      = ../libfcgi
+LIBDIR      = ../src
 LIBFCGI     = $(LIBDIR)/libfcgi.la
 
 LDADD = $(LIBFCGI)

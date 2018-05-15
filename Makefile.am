@@ -5,7 +5,7 @@
 #
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = libfcgi cgi-fcgi examples include
+SUBDIRS = src cgi-fcgi examples include
 
 include_HEADERS = include/fcgi_config.h
 
@@ -29,8 +29,8 @@ EXTRA_DIST = LICENSE                    \
              images/serv-hd.gif         \
              images/words-hd.gif        \
              include/fcgi_config_x86.h  \
-             libfcgi/os_unix.c          \
-             libfcgi/os_win32.c         \
+             src/os_unix.c              \
+             srci/os_win32.c            \
              doc/FCGI_Accept.3          \
              doc/FCGI_Finish.3          \
              doc/FCGI_SetExitStatus.3   \

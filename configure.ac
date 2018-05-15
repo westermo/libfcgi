@@ -77,7 +77,7 @@ AC_SUBST([pkgconfigdir], [$pkgconfigdir])
 AC_CONFIG_FILES([Makefile
                  cgi-fcgi/Makefile
                  include/Makefile
-                 libfcgi/Makefile
+                 src/Makefile
                  examples/Makefile
                  fcgi.pc
                  fcgi++.pc])
