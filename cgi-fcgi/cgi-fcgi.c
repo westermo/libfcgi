@@ -639,7 +639,7 @@ static int ParseArgs(int argc, char *argv[],
 				exit(-1);
 			}
 			if((av[ac] = (char *)malloc(strlen(tp1)+1)) == NULL) {
-			    fprintf(stderr, "Cannot allocate %d bytes\n",
+			    fprintf(stderr, "Cannot allocate %zd bytes\n",
 				    strlen(tp1)+1);
 			    exit(-1);
 			}
