@@ -245,7 +245,7 @@ static void AppServerReadHandler(ClientData dc, int bytesRead)
         /*
          * fromAS is not empty.  What to do with the contents?
          */
-        if(headerLen < sizeof(header)) {
+        if(headerLen < (int)sizeof(header)) {
             /*
              * First priority is to complete the header.
              */
@@ -253,7 +253,7 @@ static void AppServerReadHandler(ClientData dc, int bytesRead)
             assert(count > 0);
             memcpy(&header + headerLen, ptr, count);
             headerLen += count;
-            if(headerLen < sizeof(header)) {
+            if(headerLen < (int)sizeof(header)) {
                 break;
             }
             if(header.version != FCGI_VERSION_1) {
@@ -290,7 +290,7 @@ static void AppServerReadHandler(ClientData dc, int bytesRead)
                     break;
                 case FCGI_END_REQUEST:
                     if(!readingEndRequestBody) {
-                        if(contentLen != sizeof(erBody)) {
+                        if(contentLen != (int)sizeof(erBody)) {
                             exit(FCGX_PROTOCOL_ERROR);
 		        }
                         readingEndRequestBody = TRUE;
