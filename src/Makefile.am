@@ -23,5 +23,6 @@ libfcgi___la_SOURCES = $(INCLUDE_FILES)       \
                        $(INCLUDEDIR)/fcgio.h  \
                        fcgio.cpp
 libfcgi___la_CFLAGS  = @PTHREAD_CFLAGS@
-libfcgi___la_LDFLAGS = -lfcgi -rpath @libdir@
+libfcgi___la_LDFLAGS = -rpath @libdir@
+libfcgi___la_LIBADD  = libfcgi.la
 
