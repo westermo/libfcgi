@@ -29,4 +29,8 @@ stamp-h
 stamp-h.in
 stamp-h1
 *.tar.gz
-
+ID
+TAGS
+GPATH
+GRTAGS
+GTAGS
