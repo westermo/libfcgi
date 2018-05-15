@@ -1,6 +1,7 @@
 # $Id: Makefile.am,v 1.9 2001/12/22 03:16:20 robs Exp $
 
 INCLUDEDIR  = ../include
+AM_CFLAGS   = -W -Wextra
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 INCLUDE_FILES = $(INCLUDEDIR)/fastcgi.h     \
