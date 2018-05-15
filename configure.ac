@@ -79,9 +79,14 @@ AC_PROG_CC_WARNINGS
 
 # Optional features
 AC_ARG_ENABLE([examples],
-	[AC_HELP_STRING([--enable-examples], [Build fcgi examples/ directory])],
+	[AC_HELP_STRING([--enable-examples], [Build fcgi examples])],
 	[], [enable_examples=no])
 AM_CONDITIONAL([ENABLE_EXAMPLES], [test "$enable_examples" = yes])
+
+AC_ARG_ENABLE([cgi],
+	[AC_HELP_STRING([--enable-cgi], [Build fcgi cgi-fcgi wrapper])],
+	[], [enable_cgi=no])
+AM_CONDITIONAL([ENABLE_CGI], [test "$enable_cgi" = yes])
 
 AC_ARG_WITH([pkgconfigdir],
   [AS_HELP_STRING([--with-pkgconfigdir=DIR], [pkgconfig files])],
