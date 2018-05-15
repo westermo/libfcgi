@@ -1,5 +1,21 @@
 ChangeLog
----------
+=========
+
+2.4.1-wmo2
+----------
+
+Import Debian and Ubuntu libfcgi fixes.
+
+### Fixes
+- Fix infinite loop issue when web server is restarted.  
+  By André Düwel <mailto:duewel1982 at googlemail.com>
+- Use `poll()` over `select()`, avoids problems with >1024 connections.  
+  By Anton Kortunov <mailto:toshic.toshic at gmail.com>
+- Unwind complex dereferencing of pointers, fixes GCC build warnings.  
+  By James Page <mailto:james.page at ubuntu.com>
+- Use `cstdio` instead of `stdio.h` for C++ code.  
+  By Tatsuki Sugiura <mailto:sugi at nemui.org>
+
 
 2.4.1-wmo1
 ----------
@@ -20,6 +36,7 @@ ChangeLog
     Rasmus Andersson [rasmus at flajm.com]
 * cgi-fcgi.c: Close the file descriptor opened for "-f" handling.
     Kornél Pál [kornelpal at gmail.com]
+
 
 2.4.1
 -----

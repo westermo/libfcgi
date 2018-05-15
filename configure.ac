@@ -4,7 +4,7 @@
 #     generate the file "configure", which is run during the build
 #     to configure the system for the local environment.
 
-AC_INIT(libfcgi, 2.4.1-wmo1)
+AC_INIT(libfcgi, 2.4.1-wmo2)
 AM_INIT_AUTOMAKE([1.11 foreign])
 AM_SILENT_RULES([yes])
 AM_CONFIG_HEADER(include/fcgi_config.h)
