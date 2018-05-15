@@ -7,7 +7,7 @@
 AC_INIT(fcgi, 2.4.1-wmo1)
 AM_INIT_AUTOMAKE([1.11 foreign])
 AC_CONFIG_MACRO_DIRS([m4])
-AM_CONFIG_HEADER(fcgi_config.h)
+AM_CONFIG_HEADER(include/fcgi_config.h)
 
 AC_PROG_CC
 AC_PROG_CPP

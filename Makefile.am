@@ -7,7 +7,7 @@ ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS = libfcgi cgi-fcgi examples include
 
-include_HEADERS = fcgi_config.h
+include_HEADERS = include/fcgi_config.h
 
 pkgconfigdir = @pkgconfigdir@
 pkgconfig_DATA = fcgi.pc \
