@@ -1,10 +1,10 @@
-dnl     $Id: configure.in,v 1.27 2003/06/22 02:15:10 robs Exp $
-dnl
-dnl     This file is an input file used by the GNU "autoconf" program to
-dnl     generate the file "configure", which is run during the build
-dnl     to configure the system for the local environment.
+#     $Id: configure.in,v 1.27 2003/06/22 02:15:10 robs Exp $
+#
+#     This file is an input file used by the GNU "autoconf" program to
+#     generate the file "configure", which is run during the build
+#     to configure the system for the local environment.
 
-AC_INIT(fcgi, 2.4.1-SNAP-0910052249)
+AC_INIT(fcgi, 2.4.1-wmo1)
 AM_INIT_AUTOMAKE([1.11 foreign])
 
 AM_CONFIG_HEADER(fcgi_config.h)
@@ -18,7 +18,7 @@ AC_PROG_CXX
 
 AC_LANG([C++])
 
-dnl autoconf defaults CXX to 'g++', so its unclear whether it exists/works
+# autoconf defaults CXX to 'g++', so its unclear whether it exists/works
 AC_MSG_CHECKING([whether $CXX works])
 AC_TRY_COMPILE([#include <iostream>],
                [std::cout << "ok";],
