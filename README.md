@@ -1,29 +1,33 @@
-FastCGI Developer's Kit README
-------------------------------
+libfcgi - Fast CGI wrapper for CGI
+==================================
 
-Copyright (c) 1996 Open Market, Inc.
+This is a stripped down version of the [FastCGI Developer's Kit][0].
+Please consult that project for the fully supported version.
 
-See the [LICENSE](LICENSE) for information on usage and redistribution
-of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+[FastCGI Developer's Kit Documentation][2]
 
-Documentations
---------------
 
-- [FastCGI Developer's Kit Documentations](https://htmlpreview.github.io/?https://github.com/FastCGI-Archives/fcgi2/blob/master/doc/overview.html)
-
-Basic Directions
-----------------
-
-Unix:
+Build & Install
+---------------
 
     ./configure
     make
     make install
 
-Win32:
+When building directly from the GIT sources, create the `configure`
+script and the `Makefile.in` files using:
 
-    nmake -f Makefile.nt
-
-    (or use the MSVC++ project files in the Win32 directory)
+    ./autogen.sh
 
 
+Origin & References
+-------------------
+
+Copyright (c) 1996 Open Market, Inc.
+
+See the [LICENSE][1] for information on usage and redistribution of this
+project, and for a DISCLAIMER OF ALL WARRANTIES.
+
+[0]: https://github.com/FastCGI-Archives/fcgi2
+[1]: LICENSE
+[2]: https://htmlpreview.github.io/?https://github.com/FastCGI-Archives/fcgi2/blob/master/doc/overview.html
