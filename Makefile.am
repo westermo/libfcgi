@@ -12,7 +12,7 @@ pkgconfigdir = @pkgconfigdir@
 pkgconfig_DATA = fcgi.pc \
                  fcgi++.pc
 
-EXTRA_DIST = LICENSE.TERMS              \
+EXTRA_DIST = LICENSE                    \
              cgi-fcgi/cgi-fcgi.mak      \
              examples/authorizer.mak    \
              examples/echo.mak          \
