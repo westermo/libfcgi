@@ -2,7 +2,7 @@
 bin_PROGRAMS     = cgi-fcgi
 
 INCLUDEDIR  = ../include
-AM_CFLAGS   = -W -Wextra
+AM_CFLAGS   = -W -Wextra -Wno-unused
 AM_CPPFLAGS = -I$(top_srcdir)/include
 
 INCLUDE_FILES   = $(INCLUDEDIR)/fastcgi.h  \

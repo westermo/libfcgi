@@ -217,9 +217,6 @@ static void AppServerReadHandler(ClientData dc, int bytesRead)
     int count, outFD;
     char *ptr;
 
-    /* Touch unused parameters to avoid warnings */
-    dc = NULL;
-
     assert(fcgiReadPending == TRUE);
     fcgiReadPending = FALSE;
     count = bytesRead;
@@ -375,9 +372,6 @@ static void WriteStdinEof(void)
 
 static void WebServerReadHandler(ClientData dc, int bytesRead)
 {
-    /* Touch unused parameters to avoid warnings */
-    dc = NULL;
-
     assert(fromWS.next == fromWS.stop);
     assert(fromWS.next == &fromWS.buff[0]);
     assert(wsReadPending == TRUE);
@@ -413,9 +407,6 @@ static void WebServerReadHandler(ClientData dc, int bytesRead)
 static void AppServerWriteHandler(ClientData dc, int bytesWritten)
 {
     int length = fromWS.stop - fromWS.next;
-
-    /* Touch unused parameters to avoid warnings */
-    dc = NULL;
 
     assert(length > 0);
     assert(fcgiWritePending == TRUE);
