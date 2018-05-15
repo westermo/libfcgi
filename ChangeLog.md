@@ -1,18 +1,23 @@
-CHANGES
--------
+ChangeLog
+---------
 
-For more detail regarding changes, please consult the cvs log available
-on https://fastcgi-archives.github.io/.
+2.4.1-wmo1
+----------
 
+### Fixes
+* Major build system fixes, with focus on Linux, cross-compiling and
+  parallel build
+* Fix build warnings found by GCC 7
+
+### Changes
+* Strip Perl, Java and Win32 directories from forked project
+* Rename directories and project
 * [*nix] Install a default SIGTERM handler if one hasn't been installed.
     Based on a patch by [stephan dot jaeger at ewetel dot de]
-
 * WIN: Don't stomp on a byte we don't own in OS_FcgiConnect().
     Jay Sprenkle [jsprenkle at gmail.com]
-
 * MacOSX: define environ as (*_NSGetEnviron()) (available in crt_externs.h).
     Rasmus Andersson [rasmus at flajm.com]
-
 * cgi-fcgi.c: Close the file descriptor opened for "-f" handling.
     Kornél Pál [kornelpal at gmail.com]
 
