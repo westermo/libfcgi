@@ -738,7 +738,7 @@ int main(int argc, char **argv)
     char **envp = environ;
     int count;
     FCGX_Stream *paramsStream;
-    int numFDs;
+//    int numFDs;
     unsigned char headerBuff[8];
     int headerLen, valueLen;
     char *equalPtr;
@@ -840,7 +840,7 @@ int main(int argc, char **argv)
     /*
      * XXX: might want to use numFDs in the os library.
      */
-    numFDs = max(appServerSock, STDIN_FILENO) + 1;
+//    numFDs = max(appServerSock, STDIN_FILENO) + 1;
     OS_SetFlags(appServerSock, O_NONBLOCK);
 
     if (bytesToRead <= 0)
