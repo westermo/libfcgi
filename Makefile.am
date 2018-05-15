@@ -5,7 +5,11 @@
 #
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = src cgi-fcgi examples include
+SUBDIRS = src include cgi-fcgi
+
+if ENABLE_EXAMPLES
+SUBDIRS += examples
+endif
 
 include_HEADERS = include/fcgi_config.h
 

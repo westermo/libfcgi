@@ -4,7 +4,7 @@
 #     generate the file "configure", which is run during the build
 #     to configure the system for the local environment.
 
-AC_INIT(fcgi, 2.4.1-wmo1)
+AC_INIT(libfcgi, 2.4.1-wmo1)
 AM_INIT_AUTOMAKE([1.11 foreign])
 AM_SILENT_RULES([yes])
 AM_CONFIG_HEADER(include/fcgi_config.h)
@@ -76,6 +76,12 @@ SYSTEM=unix
 AC_SUBST([SYSTEM])
 
 AC_PROG_CC_WARNINGS
+
+# Optional features
+AC_ARG_ENABLE([examples],
+	[AC_HELP_STRING([--enable-examples], [Build fcgi examples/ directory])],
+	[], [enable_examples=no])
+AM_CONDITIONAL([ENABLE_EXAMPLES], [test "$enable_examples" = yes])
 
 AC_ARG_WITH([pkgconfigdir],
   [AS_HELP_STRING([--with-pkgconfigdir=DIR], [pkgconfig files])],
