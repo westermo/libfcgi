@@ -6,8 +6,17 @@
 
 AC_INIT(fcgi, 2.4.1-wmo1)
 AM_INIT_AUTOMAKE([1.11 foreign])
-AC_CONFIG_MACRO_DIRS([m4])
+AM_SILENT_RULES([yes])
 AM_CONFIG_HEADER(include/fcgi_config.h)
+
+AC_CONFIG_MACRO_DIRS([m4])
+AC_CONFIG_FILES([Makefile
+                 cgi-fcgi/Makefile
+                 include/Makefile
+                 src/Makefile
+                 examples/Makefile
+                 fcgi.pc
+                 fcgi++.pc])
 
 AC_PROG_CC
 AC_PROG_CPP
@@ -73,13 +82,5 @@ AC_ARG_WITH([pkgconfigdir],
   [pkgconfigdir=$withval],
   [pkgconfigdir="\${libdir}/pkgconfig"])
 AC_SUBST([pkgconfigdir], [$pkgconfigdir])
-
-AC_CONFIG_FILES([Makefile
-                 cgi-fcgi/Makefile
-                 include/Makefile
-                 src/Makefile
-                 examples/Makefile
-                 fcgi.pc
-                 fcgi++.pc])
 
 AC_OUTPUT
