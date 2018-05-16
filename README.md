@@ -1,4 +1,4 @@
-libfcgi - Fast CGI wrapper for CGI
+libfcgi - Fast CGI Developer's Kit
 ==================================
 
 This is a stripped down version of the [FastCGI Developer's Kit][0].
